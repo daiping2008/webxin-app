@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/classic/index",
+    "pages/my/index",
+    "pages/book/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "黑兔纸",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color":"#c7c7c70",
+    "selectedColor":"#000",
+    "list": [{
+      "pagePath": "pages/classic/index",
+      "text": "流行",
+      "iconPath": "/images/tab/classic.png",
+      "selectedIconPath": "/images/tab/classic@highlight.png"
+    },{
+      "pagePath": "pages/book/index",
+      "text": "书籍",
+      "iconPath": "/images/tab/book.png",
+      "selectedIconPath": "/images/tab/book@highlight.png"
+    },{
+      "pagePath": "pages/my/index",
+      "text": "书籍",
+      "iconPath": "/images/tab/my.png",
+      "selectedIconPath": "/images/tab/my@highlight.png"
+    }]
+  }
+}
