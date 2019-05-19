@@ -1,4 +1,4 @@
-// components/classic/movie/index.js
+// components/classic/music/index.js
 import ClassicBeh from '../classic-beh.js'
 Component({
   behaviors: [ClassicBeh],

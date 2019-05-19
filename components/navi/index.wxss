@@ -1,0 +1,21 @@
+.container{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 600rpx;
+  height: 80rpx;
+  border-radius: 2px;
+  background-color: #f7f7f7;
+}
+
+.img{
+  flex: 0 0 80rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.title{
+  flex: 1;
+  font-size: 28rpx;
+}

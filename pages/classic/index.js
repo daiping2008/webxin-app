@@ -8,7 +8,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    classic: {}
+    classic: {},
+    latest: true,
+    first: false
   },
 
   /**
@@ -20,11 +22,27 @@ Page({
         this.setData({
           classic: res
         })
+        classicModel.saveLatestIndex(res.index)
       })
   },
   onLike(event) {
     const behavior = event.detail.behavior || ''
     likeModel.like(behavior, this.data.classic.id, this.data.classic.type)
+  },
+  onNext() {
+    this.getCurrentClassic('next')
+  },
+  onPrev() {
+    this.getCurrentClassic('prev')
+  },
+  getCurrentClassic(nextOrPrev) {
+    classicModel.getCurrentClassic(this.data.classic.index, nextOrPrev).then(res => {
+      this.setData({
+        classic: res,
+        latest: classicModel.isLatest(res.index),
+        first: classicModel.isFirst(res.index)
+      })
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

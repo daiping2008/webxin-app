@@ -1,6 +1,9 @@
-<view>
-  <v-episode index='{{classic.index}}' />
-  <v-like bind:like='onLike' like='{{classic.like_status}}' count='{{classic.fav_nums}}' />
-
+<view class='container'>
+  <view class='header'>
+    <v-episode class='episode' index='{{classic.index}}' />
+    <v-like class='like' bind:like='onLike' like='{{classic.like_status}}' count='{{classic.fav_nums}}' />
+  </view>
   <v-movie pic='{{classic.image}}' content='{{classic.content}}' />
+
+  <v-navi bind:onNext='onNext' bind:onPrev='onPrev' latest='{{latest}}' first='{{first}}' title='{{classic.title}}' class='navi' />
 </view>
