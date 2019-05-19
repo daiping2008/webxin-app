@@ -1,2 +1,6 @@
-<!--pages/classic/index.wxml-->
-<text>pages/classic/index.wxml</text>
+<view>
+  <v-episode index='{{classic.index}}' />
+  <v-like bind:like='onLike' like='{{classic.like_status}}' count='{{classic.fav_nums}}' />
+
+  <v-movie pic='{{classic.image}}' content='{{classic.content}}' />
+</view>
