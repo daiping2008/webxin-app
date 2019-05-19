@@ -30,12 +30,12 @@ Page({
     likeModel.like(behavior, this.data.classic.id, this.data.classic.type)
   },
   onNext() {
-    this.getCurrentClassic('next')
+    this._getCurrentClassic('next')
   },
   onPrev() {
-    this.getCurrentClassic('prev')
+    this._getCurrentClassic('prev')
   },
-  getCurrentClassic(nextOrPrev) {
+  _getCurrentClassic(nextOrPrev) {
     classicModel.getCurrentClassic(this.data.classic.index, nextOrPrev).then(res => {
       this.setData({
         classic: res,

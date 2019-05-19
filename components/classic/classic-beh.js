@@ -2,7 +2,8 @@ export default Behavior({
 
   properties: {
     pic: String,
-    content: String
+    content: String,
+    hidden: Boolean
   }
 
 })

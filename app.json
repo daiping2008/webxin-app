@@ -30,5 +30,8 @@
       "iconPath": "/images/tab/my.png",
       "selectedIconPath": "/images/tab/my@highlight.png"
     }]
-  }
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ]
 }
