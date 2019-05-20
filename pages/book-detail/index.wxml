@@ -1,0 +1,47 @@
+<wxs src='../../utils/utils.wxs' module='util' />
+<view class='container'>
+  <view class='header'>
+    <image src='{{book.image}}'></image>
+    <text class='title'>{{book.title}}</text>
+    <text class='author'>{{book.author}}</text>
+  </view>
+
+  <view class='sub-container'>
+    <view class='title'>短评</view>
+    <text wx:if='{{comments.length === 0}}' class='shadow'>还没有评论</text>
+    <view wx:else class='comment-container'>
+      <v-tag wx:for="{{comments}}" wx:key='{{item.content}}' content='{{item.content}}' count='{{item.nums}}' />
+    </view>
+  </view>
+
+  <view class='sub-container'>
+    <view class='title'>内容简介</view>
+    <text class='summary' decode='{{true}}'>{{util.format(book.summary)}}</text>
+  </view>
+
+  <view class='sub-container'>
+    <view class='title'>书本信息:</view>
+    <view class='detail-container'>
+      <view class='detail-item'>
+        <view class='name'>出版社：</view>
+        <view>{{book.publisher}}</view>
+      </view>
+      <view class='detail-item'>
+        <text class='name'>出版年：</text>
+        <text class=''>{{book.pubdate}}</text>
+      </view>
+      <view class='detail-item'>
+        <text class='name'>页数：</text>
+        <text class=''>{{book.pages}}</text>
+      </view>
+      <view class='detail-item'>
+        <text class='name'>定价：</text>
+        <text class=''>{{book.price}}</text>
+      </view>
+      <view class='detail-item'>
+        <text class='name'>装帧：</text>
+        <text class=''>{{book.binding}}</text>
+      </view>
+    </view>
+  </view>
+</view>

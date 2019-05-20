@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  background-color: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+
+.header  > image {
+  width: 200rpx;
+  height: 300rpx;
+}
+
+.header .title {
+  color: #2f2f2f;
+  font-size: 38rpx;
+  margin-top: 20rpx;
+  font-weight: bold;
+}
+
+.header .author {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.sub-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.sub-container .title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #2f2f2f;
+  margin-bottom: 20rpx;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.comment-container v-tag {
+  margin-right: 15rpx;
+  margin-bottom: 10rpx;
+  border-radius: 4rpx;
+}
+
+.comment-container v-tag:nth-child(1)> view {
+  background-color: #fffbdd !important;
+}
+
+.comment-container v-tag:nth-child(2)>view {
+  background-color: #eefbff;
+}
+
+.sub-container  .shadow {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.sub-container .summary {
+  font-size: 26rpx;
+  color: #999;
+  text-indent: 52rpx;
+  line-height: 32rpx;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.detail-container .detail-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 28rpx;
+  color: #999;
+}
+.detail-container .detail-item .name {
+  width: 150rpx;
+  text-align: right;
+}

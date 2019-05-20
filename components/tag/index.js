@@ -1,10 +1,11 @@
-// components/book/index.js
+// components/tag/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    book: Object
+    content: String,
+    count: Number
   },
 
   /**
@@ -18,10 +19,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onTap() {
-      wx.navigateTo({
-        url: `/pages/book-detail/index?bid=${this.properties.book.id}`,
-      })
-    }
+
   }
 })
