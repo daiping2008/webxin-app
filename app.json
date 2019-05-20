@@ -26,7 +26,7 @@
       "selectedIconPath": "/images/tab/book@highlight.png"
     },{
       "pagePath": "pages/my/index",
-      "text": "书籍",
+      "text": "个人",
       "iconPath": "/images/tab/my.png",
       "selectedIconPath": "/images/tab/my@highlight.png"
     }]

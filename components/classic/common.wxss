@@ -24,15 +24,16 @@
   display: block;
 }
 
-.rotation{
-  animation: rotation 12s linear infinite
+.rotation {
+  animation: rotation 12s linear infinite;
 }
 
 @keyframes rotation {
   from {
-    transform: rotate(0)
+    transform: rotate(0);
   }
+
   to {
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
 }
