@@ -3,6 +3,7 @@ export default Behavior({
     data: [],
     lock: false, // 锁锁
     total: 0,
+    isEmpty: false
   },
   methods: {
     // 设置data数据
@@ -27,6 +28,11 @@ export default Behavior({
     // 设置总共多少条数据
     setTotal(total) {
       this.data.total = total
+      if (total === 0) {
+        this.setData({
+          isEmpty: true
+        })
+      }
     },
     // 加锁
     locked() {
@@ -48,7 +54,8 @@ export default Behavior({
       this.setData({
         data: [],
         lock: false,
-        total: 0
+        total: 0,
+        isEmpty: false
       })
     }
   }

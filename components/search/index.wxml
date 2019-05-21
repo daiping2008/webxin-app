@@ -8,7 +8,7 @@
     <view bind:tap='onCancel' class='cancel'>取消</view>
   </view>
 
-  <view>
+  <view wx:if='{{!q}}'>
     <view class='history'>
       <view class='title'>历史记录</view>
       <view class='tags'>
@@ -26,5 +26,8 @@
 
   <view wx:if='{{data.length > 0}}' class='books-container'>
     <v-book wx:for='{{data}}' wx:key='item.id' book='{{item}}' />
+  </view>
+  <view wx:if='{{isEmpty}}' class='noResult'>
+    <text>暂无数据</text>
   </view>
 </view>

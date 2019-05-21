@@ -65,6 +65,16 @@
   margin-bottom: 15rpx;
 }
 
+.noResult {
+  font-size: 30rpx;
+  color: #999;
+  position: absolute;
+  top: 130rpx;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+}
+
 .history .tags {
   display: flex;
   flex-direction: row;

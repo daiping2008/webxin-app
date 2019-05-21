@@ -48,6 +48,8 @@ Component({
       this.initialize()
     },
     onConfirm(event) {
+      // 初始化数据
+      this.initialize()
       const q = event.detail.value
       if (!q) return
       this._getBookSearch({
