@@ -5,6 +5,12 @@ var format = function (text) {
   return text.replace(reg, '\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
 }
 
+var limit = function (arr, len) {
+  if (!arr) return
+  return arr.splice(0, len)
+}
+
 module.exports = {
-  format: format
+  format: format,
+  limit: limit
 }

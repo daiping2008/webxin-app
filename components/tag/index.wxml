@@ -1,4 +1,4 @@
-<view class='container'>
+<view bind:tap='onTap' class='container'>
   <text class='content'>{{content}}</text>
   <text wx:if='{{count}}' decode='{{true}}'>&nbsp;+{{count}}</text>
 </view>

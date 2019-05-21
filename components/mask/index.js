@@ -1,11 +1,10 @@
-// components/tag/index.js
+// components/mask/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    content: String,
-    count: Number
+
   },
 
   /**
@@ -19,10 +18,6 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onTap() {
-      this.triggerEvent('tapping', {
-        value: this.properties.content
-      })
-    }
+
   }
 })
