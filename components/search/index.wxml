@@ -1,0 +1,30 @@
+<view class='container'>
+  <view class='header'>
+    <view class='search-container'>
+      <image class='icon' src='./images/search.png'></image>
+      <input value='{{q}}' bindconfirm='onConfirm' class='bar' placeholder='书籍名'></input>
+      <image bind:tap='onClear' class='icon' src='./images/cancel.png'></image>
+    </view>
+    <view bind:tap='onCancel' class='cancel'>取消</view>
+  </view>
+
+  <view>
+    <view class='history'>
+      <view class='title'>历史记录</view>
+      <view class='tags'>
+        <v-tag bind:tapping='onConfirm' wx:for="{{his}}" wx:key="*this" content='{{item}}' />
+      </view>
+    </view>
+
+    <view class='history'>
+      <view class='title'>热门搜索</view>
+      <view class='tags'>
+        <v-tag bind:tapping='onConfirm' wx:for="{{hot}}" wx:key="*this" content='{{item}}' />
+      </view>
+    </view>
+  </view>
+
+  <view wx:if='{{data.length > 0}}' class='books-container'>
+    <v-book wx:for='{{data}}' wx:key='item.id' book='{{item}}' />
+  </view>
+</view>

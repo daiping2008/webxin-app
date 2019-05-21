@@ -1,6 +1,6 @@
-<view class='container'>
+<view wx:if='{{!search}}' class='container'>
   <view class='header'>
-    <view class='search-wrapper'>
+    <view bind:tap='onShowSearch' class='search-wrapper'>
       <image src='../../images/icon/search.png'></image>
       <text>搜索书籍</text>
     </view>
@@ -13,5 +13,6 @@
       </block>
     </view>
   </view>
- 
 </view>
+
+<v-search more='{{more}}' wx:if='{{search}}' bind:cancel='onCancel' />

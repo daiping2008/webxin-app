@@ -7,17 +7,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-    books:[]
+    books: [],
+    search: false,
+    more: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    bookModel.getHotList().then(res=>{
+    bookModel.getHotList().then(res => {
       this.setData({
         books: res
       })
+    })
+  },
+
+  onCancel() {
+    this.setData({
+      search: false
+    })
+  },
+
+  onShowSearch() {
+    this.setData({
+      search: true
     })
   },
 
@@ -60,7 +74,9 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.setData({
+      more: Math.random()
+    })
   },
 
   /**

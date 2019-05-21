@@ -23,7 +23,10 @@ class BookModel extends HTTP {
     })
   }
 
-  addShortComment({ id, content }) {
+  addShortComment({
+    id,
+    content
+  }) {
     return this.request({
       url: `/book/add/short_comment`,
       data: {
@@ -33,6 +36,21 @@ class BookModel extends HTTP {
       method: 'POST'
     })
   }
+  getBookSearch({
+    start,
+    q,
+    summary
+  }) {
+    return this.request({
+      url: `/book/search?summary=${summary}`,
+      data: {
+        start,
+        q,
+        count: 20
+      }
+    })
+  }
+
 }
 
 export default BookModel

@@ -6,7 +6,7 @@ Component({
   properties: {
     index: {
       type: Number,
-      observer: function (newVal, oldVal) {
+      observer: function(newVal, oldVal) {
         const val = newVal < 10 ? '0' + newVal : newVal
         this.setData({
           _index: val
@@ -21,7 +21,8 @@ Component({
    */
   data: {
     months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月',
-      '十二月'],
+      '十二月'
+    ],
     month: 0,
     year: 0,
     _index: 0

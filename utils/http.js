@@ -6,7 +6,7 @@ import {
 class HTTP {
   request({
     url,
-    data,
+    data = {},
     method = 'GET'
   }) {
     return new Promise((resolve, reject) => {
@@ -20,7 +20,7 @@ class HTTP {
         },
         success: res => {
           const code = res.statusCode + '',
-                data = res.data
+            data = res.data
           if (code.startsWith('2')) {
             resolve(data)
           } else {
